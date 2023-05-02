@@ -244,3 +244,24 @@ INFO:Query: HP touchpad has 10 hits.
 INFO:Query: rechargeable batteries has 10 hits.
 INFO:Finished running 10000 queries in 1.2622880030333665 minutes
 ```
+
+| Setting/Benchmark | Time to index (min) | Time spent in bulk indexing (min) |
+|---|---|---|
+| Default settings | 5.6233 | 16.5711 |
+| Without mapping | 5.2621 | 14.1829 |
+| Without mapping, with refresh_interval -1 | 5.1169 | 13.3771 |
+| With refresh_interval 1s | 5.2482 | 14.0482 |
+| With refresh_interval 60s | 5.6690 | 15.1676 |
+| 400 per batch | 4.9984 | 12.1155 |
+| 800 per batch | 4.9820 | 12.2820 |
+| 1600 per batch | 4.9487 | 12.2447 |
+| 3200 per batch | 4.9713 | 12.2426 |
+
+
+| Query Settings | Query Time (minutes) |
+| --- | --- |
+| Default Settings | 3.9005 |
+| No Fuzziness | 3.3543 |
+| No Fuzziness, No Function Scores | 2.7434 |
+| No Fuzziness, No Function Scores, Only Multi-Match | 1.9578 |
+| No Fuzziness, No Function Scores, Only Multi-Match (Name and Short Description) | 1.2623 |

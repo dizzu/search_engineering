@@ -251,11 +251,14 @@ INFO:Finished running 10000 queries in 1.2622880030333665 minutes
 | Without mapping | 5.2621 | 14.1829 |
 | Without mapping, with refresh_interval -1 | 5.1169 | 13.3771 |
 | With refresh_interval 1s | 5.2482 | 14.0482 |
-| With refresh_interval 60s | 5.6690 | 15.1676 |
+| With refresh_interval 60s | 5.2481 | 14.1416 |
 | 400 per batch | 4.9984 | 12.1155 |
 | 800 per batch | 4.9820 | 12.2820 |
 | 1600 per batch | 4.9487 | 12.2447 |
-| 3200 per batch | 4.9713 | 12.2426 |
+| 3200 per batch | 4.9286 | 11.3218 |
+| 5000 per batch | 5.1295 | 12.1245 |
+| 16 workers | 3.0706 | 17.1828 |
+| 32 workers | 2.8960 | 31.1101 |
 
 
 | Query Settings | Query Time (minutes) |
